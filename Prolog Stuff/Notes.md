@@ -12,8 +12,10 @@ parent(jeremy, bruno).
 % This predicate is also known as a fact.
 ```
 # Atoms and Variables
-An **atom** is an **identifier**. They are written in lowercase or wrapped in `''`.<br>
-A **variable** is any possible item. They are written capitalised or start with an underscore.
+| Keyword  | Definition | Presentation                    |
+|----------|------------|---------------------------------|
+| Atom     | Identifier | Lowercase or wrapped in `''`.   |
+| Variable | Any item   | Capitalised or starts with `_`. |
 
 # Facts vs. Rules
 A **fact** is when a **predicate** is created **unconditionally**.<br>
