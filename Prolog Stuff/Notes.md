@@ -1,5 +1,5 @@
 # Prolog Notes:
-A `.` closes any statements, like a `;` in CSS or `ENDIF` in pseudocode. Or just like in English.<br>
+A period `.` closes any statements, like a semi-colon `;` in CSS or `ENDIF` in pseudocode. Or just like in English.<br>
 To define a **predicate**:<br>
 In writing, `predicate/arguments` is used.<br>
 Example:<Br>
@@ -8,7 +8,7 @@ Example:<Br>
 Example of defining a **predicate** in Prolog:
 ```
 parent(jeremy, bruno).
-% . is needed after defining a predicate
+% A period "." is needed after defining a predicate
 % This predicate is also known as a fact.
 ```
 # Atoms and Variables
