@@ -1,7 +1,7 @@
 % A sibling is when one or more parents is the same as another
 % A capitalised name is a *variable*
-% A lowercase name is a *constant* known as an *atom*
-% Facts: parent(Child, Parent)
+% A lowercase name is an *atom*
+% Fact: parent(Child, Parent) parent/2
 % (This was indicated by the name of the first child)
 parent(childe, anna).
 parent(childe, jakob).
@@ -39,6 +39,7 @@ parent(X) :-
 
 % so, if a person appears as a parent in the parent/2 predicate,
 % they will be considered a parent in the unary parent/1 predicate
+% e.g. ?- parent(anna). true.
 
 % A person's gender is defined by their choice
 % This means a list of names can accurately determine the gender of each person
@@ -53,8 +54,10 @@ undisclosedGenderList([]).
 female(Girl) :-
     % this essentially sets the *variable* List to females
     females(List),
-    % Built-in predicate
+    % Built-in predicate finds if Girl (The person) is in List (The list of females)
     member(Girl, List).
+% e.g. ?- female(anna). true.
+% ?- female(X). X = [anna, gracie, amelia, pepper] true.
 
 male(Boy) :-
     males(List),
