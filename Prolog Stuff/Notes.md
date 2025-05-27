@@ -18,9 +18,10 @@ Prolog uses one data type: **term**.
 | Term          | Definition                                | Presentation                    |
 |---------------|-------------------------------------------|---------------------------------|
 | Atom          | Identifier                                | Lowercase or wrapped in `''`.   |
-| Variable      | Any item                                  | Capitalised or starts with `_`. |
+| Variable      | Placeholders for arbitrary terms          | Capitalised or starts with `_`. |
 | Compound term | A functor atom with a number of arguments | `functor(arg)`                  |
 
+The single underscore variable (`_`) is an anonymous variable meaning "any term" and is used when the term is not significant.<br>
 Special compound terms:
 |  | Presentation |
 |------|------|
