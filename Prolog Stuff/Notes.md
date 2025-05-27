@@ -109,8 +109,11 @@ A cons cell is when:<br>
     * The **second** element is called the **Tail**.<br>
         * This element can be an empty list.
 ```
+[] % empty list
 [a] = [a | []] % one item list, in Prolog, the Tail becomes an empty list
 [a, b] = [a | [b]] % two item list
+% while the above is true, [b] is a one item list, and so the full list can look like this:
+[a, b] = [a | [b]] = [a | [b | []]]
 [a, b, c] = [a | [b | [c | []]]] % three item list
 [a, b, c, d] = [a | [b | [c | [d]]]] % four item list
 % for the above list:
