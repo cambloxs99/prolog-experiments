@@ -11,11 +11,21 @@ parent(jeremy, bruno).
 % A period "." is needed after defining a predicate
 % This predicate is also known as a fact.
 ```
-# Atoms and Variables
-| Keyword  | Definition | Presentation                    |
-|----------|------------|---------------------------------|
-| Atom     | Identifier | Lowercase or wrapped in `''`.   |
-| Variable | Any item   | Capitalised or starts with `_`. |
+# Terms
+Prolog uses one data type: **term**.
+**Term** has several subtypes that modify the behavior of the term.
+
+| Term          | Definition                                | Presentation                    |
+|---------------|-------------------------------------------|---------------------------------|
+| Atom          | Identifier                                | Lowercase or wrapped in `''`.   |
+| Variable      | Any item                                  | Capitalised or starts with `_`. |
+| Compound term | A functor atom with a number of arguments | `functor(arg)`                  |
+
+Special compound terms:
+|  | Presentation |
+|------|------|
+| List | `[a, b, c]` or `[a \| [b \| [c \| []]]]`|
+| String | `"string"` - becomes a list of the numeric character codes |
 
 # Facts vs. Rules
 A **fact** is when a **predicate** is created **unconditionally**.<br>
