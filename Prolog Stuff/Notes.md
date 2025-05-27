@@ -77,7 +77,7 @@ sibling(Child1, Child2) :-
 Download: [Prolog](https://www.swi-prolog.org/Download.html)<br>
 In the app you should see:<br>
 `?- `<br>
-This is a Prolog environment, similar to Terminal or Code.exe.<br>
+This is a Prolog interface, similar to Terminal or Code.exe.<br>
 First, a `.pl` file is needed.<br>
 Second, use `consult/1` to open the file. (**Reminder**: `consult/1` means a predicate named **consult** which takes **one** argument - is unary.)<br>
 `?- consult('siblings.pl').` (**Reminder**: use a `.` after writing the statement to execute what has been written)<br>
