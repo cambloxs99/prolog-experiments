@@ -86,6 +86,30 @@ true .
 false.
 ```
 # Lists
+Lists are **cons cells** (cons is short for construct, so a cons cell can be thought of as a constructor cell).<br>
+A cons cell is when:<br>
+* A list of two items are separated by a pipe `|`.<br>
+* The second item can be another cons cell.<br>
+* A constructor cell must have **two elements**.<br>
+    * The **first** element is called the **Head**.<br>
+    * The **second** element is called the **Tail**.<br>
+        * This element can be an empty list.
+```
+[a] = [a | []] % one item list, in Prolog, the Tail becomes an empty list
+[a, b] = [a | [b]] % two item list
+[a, b, c] = [a | [b | [c | []]]] % three item list
+[a, b, c, d] = [a | [b | [c | [d]]]] % four item list
+% for the above list:
+Head = a,
+Tail = [b, c, d].
+% The Tail is treated as a list in Prolog, even if it contains one item
+% in the list [H, T], T can be any number of cons cells
+% so theoretically, [H, T] may expand out to:
+[H, [a | [b | [c | [d]]]]]
+% this means:
+T = [a, b, c, d]
+[a, b, c, d] = [a | [b | [c | [d]]]]
+```
 `member/2` is a built in **predicate**.<br>
 member(item, List).<br>
 <br>
