@@ -46,7 +46,7 @@ sibling(Child1, Child2) :-
 Let's break down the rule:<br>
 `:-` means **if**, or **is true when**.<br>
 So, it can be read as:<br>
-"**Child1** and **Child2** are siblings when **Child1** and **Child2** both have the same **Parent**, and **Child1** is not **Child2**."<br>
+"`Child1` and `Child2` are siblings when `Child1` and `Child2` both have the same `Parent`, and `Child1` is not `Child2`."<br>
 Note: half-siblings and step-siblings are included as siblings based off of this.<br>
 Let's give a full example:<br>
 ```
@@ -95,6 +95,9 @@ true .
 true .
 ?- sibling(childe, lima).
 false.
+?- parent(lima, X).
+X = charlie
+true .
 ```
 # Lists
 Lists are **cons cells** (cons is short for construct, so a cons cell can be thought of as a constructor cell).<br>
