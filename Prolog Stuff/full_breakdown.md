@@ -45,4 +45,4 @@ This returns `parent(Child1, Parent)` as **true**.<br>
 `parent(lima, anna)`<br>
 This is **not** a defined **fact**, so Prolog returns `parent(Child2, Parent)` as **false**.<br>
 - As one of the conditions for `sibling(childe, lima)` is **false**, the fact is **false**.
-- The third condition is not checked only one of the conditions need to be false to disprove.
+- The third condition is not checked as only one of the conditions need to be false to disprove.
