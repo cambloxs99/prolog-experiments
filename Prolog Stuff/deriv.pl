@@ -37,7 +37,7 @@ derivative_without_potential_trailing_0s([D | Dr], [C | R]) :-
     D is (N - 1) * C,
     derivative_without_potential_trailing_0s(Dr, R).
 
-% ?- derivate([6, 6, 2], X) fails as constant cannot be found
+% ?- derivative([6, 6, 2], X) fails as constant cannot be found
 % only two values or y = mx + c, y = c
 not_curve([_, _]).
 not_curve([_]).
