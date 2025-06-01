@@ -6,7 +6,7 @@ Example:<Br>
 `parent/2`<br>
 **parent** is a **predicate** that takes **2** arguments, presumably the child and parent.<br>
 Example of defining a **predicate** in Prolog:
-```
+```prolog
 parent(jeremy, bruno).
 % A period "." is needed after defining a predicate
 % This predicate is also known as a fact.
@@ -32,12 +32,12 @@ Special compound terms:
 A **fact** is when a **predicate** is created **unconditionally**.<br>
 A **rule** is when a **predicate** is created subject to **conditions**.<br>
 Fact:
-```
+```prolog
 parent(childe, anna).
 ```
 This means that Anna is always the parent of Childe.<br>
 Rule:
-```
+```prolog
 sibling(Child1, Child2) :-
     parent(Child1, Parent),
     parent(Child2, Parent),
@@ -49,7 +49,7 @@ So, it can be read as:<br>
 "`Child1` and `Child2` are siblings when `Child1` and `Child2` both have the same `Parent`, and `Child1` is not `Child2`."<br>
 Note: half-siblings and step-siblings are included as siblings based off of this.<br>
 Let's give a full example:<br>
-```
+```prolog
 % Facts: parent(Child, Parent)
 parent(childe, anna).
 parent(jordan, anna).
@@ -88,7 +88,7 @@ Now, any **predicates** created inside that file can be used.<br>
 So, `parent/2` and `sibling/2` can be used.<br>
 Prolog will return **true** or **false**.<br>
 Examples:<br>
-```
+```prolog
 ?- parent(childe, anna).
 true .
 ?- sibling(childe, jordan).
@@ -122,10 +122,11 @@ Tail = [b, c, d].
 % The Tail is treated as a list in Prolog, even if it contains one item
 % in the list [H, T], T can be any number of cons cells
 % so theoretically, [H, T] may expand out to:
-[H, [a | [b | [c | [d]]]]]
+[e, [a | [b | [c | [d]]]]]
 % this means:
+H = e
 T = [a, b, c, d]
-[a, b, c, d] = [a | [b | [c | [d]]]]
+[a, b, c, d] = [a | [b | [c | [d]]]] = [a | [ b | [c | [d | []]]]]
 ```
 `member/2` is a built in **predicate**.<br>
 member(item, List).<br>
